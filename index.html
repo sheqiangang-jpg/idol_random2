@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+
+<title>My Oshi Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--ハンバーガー-->
+
+<header class="header">
+
+	<h1 class="header-title">
+		My Oshi Profile
+	</h1>
+
+	<div class="hamburger" id="hamburger">
+		=
+	</div>
+
+</header>
+
+<nav class="menu" id="menu">
+
+	<ul>
+
+		<li>
+			<a href="home.html">ホーム</a>
+		</li>
+
+		<li>
+			<a href="index.html">おみくじ</a>
+		</li>
+
+	</ul>
+
+</nav>
+<!--ハンバーガー終了～-->
+<div class="container">
+
+	<h1>
+		♡ My Oshi Profile ♡
+	</h1>
+
+	<img src="./image/oshi.jpg"
+		alt="推しの写真"
+		class="profile-img">
+
+	<table class="profile-table">
+
+		<tr>
+			<th>=LOVE</th>
+			<td>イコールラブ</td>
+		</tr>
+
+		<tr>
+			<th>誕生日</th>
+			<td>9月6日デビュー</td>
+		</tr>
+
+		<tr>
+			<th>グループカラー</th>
+			<td>ピンク</td>
+		</tr>
+
+		<tr>
+			<th>好きなところ</th>
+			<td>
+				笑顔が素敵なところ、
+				パフォーマンスとのギャップ！
+			</td>
+		</tr>
+
+	</table>
+
+	<div class="message">
+
+		<h3>
+			ー技術検証ー
+		</h3>
+
+		<p>
+			HTML,CSS,javascriptを用いて作成しました
+		</p>
+
+	</div>
+
+	<div class="button-area">
+
+		<button id="start-button">
+			推しを決めよう！
+		</button>
+
+	</div>
+
+</div>
+
+<script>
+
+	document.querySelector("#start-button")
+		.addEventListener("click", function(){
+
+			location.href = "index2.html";
+
+		});
+
+	document.querySelector("#hamburger")
+		.addEventListener("click", function(){
+
+			document.querySelector("#menu")
+				.classList.toggle("open");
+
+		});
+
+</script>
+
+</body>
+</html>
