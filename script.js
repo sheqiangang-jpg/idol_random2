@@ -1,6 +1,3 @@
-/**
- * メンバー名一覧
- */
 const memberNames = [
 	"大谷映美里",
 	"大場花菜",
@@ -13,6 +10,7 @@ const memberNames = [
 	"諸橋沙夏",
 	"山本杏奈"
 	];
+	
 //ランダムな番号を取得する
 function getRandomNumber(){
 	return Math.floor(Math.random() * 10);
@@ -21,10 +19,8 @@ function getRandomNumber(){
 function playOmikuji(){
 	const timer = setInterval(function(){
 		const number = getRandomNumber();
-		document.querySelector("#js-result")
-			.setAttribute(
-				"src",
-				`./image/love${number}.png`
+		document.querySelector("#js-result").setAttribute(
+				"src",`./image/love${number}.png`
 			);
 		document.querySelector("#js-name")
 			.textContent =
@@ -106,26 +102,10 @@ function playOmikuji(){
 		clearInterval(timer);
 	},3000);
 }
-/**
- * ボタンイベント
- */
+
 document.querySelector("#js-button")
 	.addEventListener(
 		"click",
 		playOmikuji
 	);
 
-document.querySelector("#start-button")
-	.addEventListener("click", function(){
-
-		location.href = "index.html";
-
-	});
-
-document.querySelector("#hamburger")
-	.addEventListener("click", function(){
-
-		document.querySelector("#menu")
-			.classList.toggle("open");
-
-	});
