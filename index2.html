@@ -11,6 +11,54 @@
 </head>
 
 <body>
+	
+<!--ハンバーガー-->
+
+<header class="header">
+
+	<h1 class="header-title">
+		My Oshi Profile
+	</h1>
+
+	<div class="hamburger" id="hamburger">
+		=
+	</div>
+
+</header>
+
+<nav class="menu" id="menu">
+
+	<ul>
+
+		<li>
+			<a href="index.html">ホーム</a>
+		</li>
+
+		<li>
+			<a href="index2.html">おみくじ</a>
+		</li>
+		<li>
+			<details >
+				  <summary>メンバー</summary>
+				  	<p style="color: #d8b4ff;">大谷映美里</p>
+					<p style="color: orange;">大場花菜</p>
+					<p style="color:skyblue;">音嶋莉沙</p>
+					<p style="color: lightpink">齋藤樹愛羅</p>
+					<p style="color:white">佐々木舞香</p>
+					<p style="color:red">髙松瞳</p>
+					<p style="color:yellow">瀧脇笙古</p>
+					<p style="color:purple">野口衣織</p>
+					<p style="color:green">諸橋沙夏</p>
+					<p style="color:blue">山本杏奈</p>
+			</details>
+
+		</li>
+
+	</ul>
+
+</nav>
+<!--ハンバーガー終了～-->
+	
 	<div class="omikuji">
 		<h1 class="omikuji-headline">
 			<span class = "love">=loveで<br>
@@ -19,11 +67,25 @@
 			<img id="js-result" src="./image/oshi.jpg" alt="おみくじ">
 		</div>
 		<h2 id = "js-name">
-			誰になるかな！！
+			名前が表示されます
 		</h2>
 		
 		<button type="button" class="omikuji-button" id="js-button">ボタンを押して！</button>
 	</div>
 	<script src="script.js"></script>
+	
+	<script>
+
+
+	document.querySelector("#hamburger")
+		.addEventListener("click", function(){
+
+			document.querySelector("#menu")
+				.classList.toggle("open");
+
+		});
+
+</script>
+	
 </body>
 </html>
